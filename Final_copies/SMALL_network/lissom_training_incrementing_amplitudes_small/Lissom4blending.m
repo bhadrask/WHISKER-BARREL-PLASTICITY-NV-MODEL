@@ -63,4 +63,3 @@ elseif yo>3600
      disp(ds);
 end
     
-figure(4);imagesc(cell2mat(lissom.layers{2}.waff));

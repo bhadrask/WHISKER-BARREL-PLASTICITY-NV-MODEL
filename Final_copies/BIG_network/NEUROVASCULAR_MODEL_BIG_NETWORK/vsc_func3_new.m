@@ -6,7 +6,7 @@ n2=bndry(2);
 Pa=para(1);
 A=zeros(n1-1);
 b=zeros(n1-1,1);
-
+keyboard;
 for i=1:n2-1
     if N1(i)==0
         A(N2(i),N2(i))=A(N2(i),N2(i))-1/R(i);
@@ -28,6 +28,7 @@ for i=1:n2-1
         b(N2(i))=b(N2(i))+dVdt(i);       
     end
 end
+
 
 Pna=[Pa;(A\b)];
 
