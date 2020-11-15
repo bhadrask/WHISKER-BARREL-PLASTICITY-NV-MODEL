@@ -1,5 +1,6 @@
 clear all;close all;clc;
-load Final_X_test_sigma_6.mat;
+% load Final_X_test_sigma_6.mat;
+load Final_X_test_sigma_4.mat
 tic;
 a=X1 ;xdim = size(a(:,:,1));
 %% section for lissom constraining
@@ -58,10 +59,10 @@ else
 end
 %rf1=lissom.layers{2}.rf;
 
-save('lissom_10atpmax_newopts_14q_8r_sigma6.mat','lissom','opts','ATPmax');
+save('lissom_10atpmax_newopts_14q_8r_sigma4.mat','lissom','opts','ATPmax');
 % gama1=opts.p;gama2=opts.q;gama3=opts.r;dim1=lissom.layers{2}.dim;rf1=lissom.layers{2}.rf;
 % save('lissomtrain1_10atpmax.mat','lissomaff','lissomexc','lissominhb','lissomfb','gama1','gama2','gama3','dim1','rf1');
-load('Final_X_test_sigma_6_AMP5.mat');
+% load('Final_X_test_sigma_6_AMP5.mat');
 Xtest=X1;
 inst_response(lissom,opts,Xtest,Z_constraint,label,ATP,ATPmax);
 yo=toc;

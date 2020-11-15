@@ -43,6 +43,6 @@ eA=bndry(5);
 % Ae=V(eA+1:end)./((Pe(eA+1:end)-Pic).^(1./beta));
 
 %  Ae=Pe(eA+1:end)-Pic;
- Ae=(Pe(1:end)-Pic)./((V(1:end)).^1.7);
+ Ae=(Pe(1:end)-Pic)./((V(1:end)).^1);
 % Ar=(Pe(1:eA)-Pic)./V(1:eA);
 end

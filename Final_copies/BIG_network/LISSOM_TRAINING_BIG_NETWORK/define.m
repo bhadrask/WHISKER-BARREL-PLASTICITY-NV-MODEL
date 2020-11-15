@@ -4,7 +4,7 @@ function [lissom,opts] = define(neu_size)
 
 x.layers = {
     struct('type', 'i') %input layer
-    struct('type', 'v', 'dim', neu_size,'rf',[9 9],'exe_rad',3,'inhb_rad',10,'stride',1); %v1 layer
+    struct('type', 'v', 'dim', neu_size,'rf',[9 9],'exe_rad',3,'inhb_rad',35,'stride',1); %v1 layer
     %struct('type', 'v', 'dim', [50 50],'rf',[7 7],'exe_rad',3,'inhb_rad',6,'stride',1); %v2 layer
     }; 
  % Options for training.

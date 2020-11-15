@@ -1,7 +1,8 @@
-close all;
+% close all;
 clc;
 clear;
-filename = 'FINAL_amp3.mat';
+image_settings
+filename = 'FINAL_amp8.mat';
 load(filename);k=size(x,1);
 input1=IN.input;
 nm=1:k;
@@ -84,7 +85,7 @@ for j=1:length(nm)
     avg_CMRO2n0=sum(sum(CMRO20_2d.*neu_select1)/numel(find(neu_select1>0)));
     AVG_ATP=sum(sum( ATP2d.*neu_select1)/numel(find(neu_select1>0)));
     ATPper(loopnr)=100*((AVG_ATP)-2.5)/2.5;
-    CMR02_per(loopnr)=avg_CMRO2n/avg_CMRO2n0;%100*(avg_CMRO2n-avg_CMRO2n0)/avg_CMRO2n0;
+    CMR02_per(loopnr)=100*(avg_CMRO2n-avg_CMRO2n0)/avg_CMRO2n0;
     Fp=sum(sum(Fpoint.*area_select1)/numel(find(area_select1>0)));
     Fp0=sum(sum(Fpoint0.*area_select1)/numel(find(area_select1>0)));
     Flow(loopnr)=100*(Fp- Fp0)/ Fp0;
@@ -116,3 +117,7 @@ figure();plot(time,ATPper);
 xlabel('Time in seconds');ylabel('% drop in ATP')
 title('Percentage drop in concentration of ATP')
 figure();plot(time,CMR02_per);title('Percentage change in concentration of CMRO2')
+figure();plot(time,CMR02_per);hold on;plot(time, Flow,'r');
+hold on;
+plot( time,Vol,'b');
+legend('CMRO2','CBF','CBV');

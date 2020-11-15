@@ -13,7 +13,7 @@ Pe=zeros(nE,1);
 % Peold=Pr(1:nE);
 % Pnold=Pr(nE+1:end);
 %  Pe(eA+1:end)=((V(eA+1:end)./V0(eA+1:end)).^beta).*Ae+Pic;
-Pe(n1:end)=((V(n1:end).^1.7).*(beta(n1:end)))+Pic;
+Pe(n1:end)=((V(n1:end).^1).*(beta(n1:end)))+Pic;
 % Pe(25)
 % beta(25)
 %   keyboard;
